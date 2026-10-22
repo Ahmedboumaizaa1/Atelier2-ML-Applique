@@ -1,0 +1,660 @@
+{
+  "modele": "openai/gpt-oss-120b",
+  "consigne": "v1",
+  "temperature": 0,
+  "date": "2026-10-22T10:50:05",
+  "duree_s": 213.2,
+  "metriques": {
+    "n": 72,
+    "correct": 63,
+    "accuracy": 0.875,
+    "macro_f1": 0.8696640316205534,
+    "invalides": 0,
+    "par_classe": {
+      "facturation": {
+        "precision": 0.8333333333333334,
+        "recall": 0.9090909090909091,
+        "f1": 0.8695652173913043,
+        "vp": 20,
+        "fp": 4,
+        "fn": 2,
+        "support": 22
+      },
+      "technique": {
+        "precision": 0.9,
+        "recall": 0.9,
+        "f1": 0.9,
+        "vp": 18,
+        "fp": 2,
+        "fn": 2,
+        "support": 20
+      },
+      "compte": {
+        "precision": 0.8823529411764706,
+        "recall": 0.9375,
+        "f1": 0.9090909090909091,
+        "vp": 15,
+        "fp": 2,
+        "fn": 1,
+        "support": 16
+      },
+      "commercial": {
+        "precision": 0.9090909090909091,
+        "recall": 0.7142857142857143,
+        "f1": 0.8,
+        "vp": 10,
+        "fp": 1,
+        "fn": 4,
+        "support": 14
+      }
+    },
+    "matrice": {
+      "facturation": {
+        "facturation": 20,
+        "technique": 1,
+        "compte": 0,
+        "commercial": 1,
+        "invalide": 0
+      },
+      "technique": {
+        "facturation": 2,
+        "technique": 18,
+        "compte": 0,
+        "commercial": 0,
+        "invalide": 0
+      },
+      "compte": {
+        "facturation": 0,
+        "technique": 1,
+        "compte": 15,
+        "commercial": 0,
+        "invalide": 0
+      },
+      "commercial": {
+        "facturation": 2,
+        "technique": 0,
+        "compte": 2,
+        "commercial": 10,
+        "invalide": 0
+      }
+    }
+  },
+  "predictions": [
+    {
+      "id": "T001",
+      "texte": "Je paie pour un service qui ne marche pas depuis mardi.",
+      "reference": "technique",
+      "prediction": "technique",
+      "ambigu": 0,
+      "brut": "{\"categorie\":\"technique\"}"
+    },
+    {
+      "id": "T002",
+      "texte": "il me dit que mon mail existe deja alors que je men suis jamais servi",
+      "reference": "compte",
+      "prediction": "compte",
+      "ambigu": 0,
+      "brut": "{\"categorie\":\"compte\"}"
+    },
+    {
+      "id": "T003",
+      "texte": "Vous avez mon ancienne adresse, celle de mon ancien logement.",
+      "reference": "compte",
+      "prediction": "compte",
+      "ambigu": 0,
+      "brut": "{\"categorie\":\"compte\"}"
+    },
+    {
+      "id": "T004",
+      "texte": "Je paie 40 euros pour un service que j'utilise deux fois par mois.",
+      "reference": "commercial",
+      "prediction": "facturation",
+      "ambigu": 1,
+      "brut": "{\"categorie\":\"facturation\"}"
+    },
+    {
+      "id": "T005",
+      "texte": "Mon prenom est mal orthographie partout dans mon espace, y compris sur les documents que vous editez.",
+      "reference": "compte",
+      "prediction": "compte",
+      "ambigu": 0,
+      "brut": "{\"categorie\":\"compte\"}"
+    },
+    {
+      "id": "T006",
+      "texte": "stop",
+      "reference": "commercial",
+      "prediction": "compte",
+      "ambigu": 0,
+      "brut": "{\"categorie\":\"compte\"}"
+    },
+    {
+      "id": "T007",
+      "texte": "Vous faites quelque chose pour les etudiants ?",
+      "reference": "commercial",
+      "prediction": "commercial",
+      "ambigu": 0,
+      "brut": "{\"categorie\":\"commercial\"}"
+    },
+    {
+      "id": "T008",
+      "texte": "Je veux resilier car le service est trop souvent en panne.",
+      "reference": "commercial",
+      "prediction": "commercial",
+      "ambigu": 1,
+      "brut": "{\"categorie\":\"commercial\"}"
+    },
+    {
+      "id": "T009",
+      "texte": "Facture impayee selon vous, mais mon releve bancaire montre bien le debit du 12 mars.",
+      "reference": "facturation",
+      "prediction": "facturation",
+      "ambigu": 0,
+      "brut": "{\"categorie\":\"facturation\"}"
+    },
+    {
+      "id": "T010",
+      "texte": "Les notifications ne s'affichent plus depuis que j'ai change de telephone.",
+      "reference": "technique",
+      "prediction": "technique",
+      "ambigu": 0,
+      "brut": "{\"categorie\":\"technique\"}"
+    },
+    {
+      "id": "T011",
+      "texte": "On m'a appele pour une promotion, je voudrais en savoir plus avant d'accepter.",
+      "reference": "commercial",
+      "prediction": "commercial",
+      "ambigu": 0,
+      "brut": "{\"categorie\":\"commercial\"}"
+    },
+    {
+      "id": "T012",
+      "texte": "Est-ce que je peux essayer avant de m'engager ?",
+      "reference": "commercial",
+      "prediction": "commercial",
+      "ambigu": 0,
+      "brut": "{\"categorie\":\"commercial\"}"
+    },
+    {
+      "id": "T013",
+      "texte": "Depuis la mise a jour d'hier, l'application se ferme toute seule au demarrage.",
+      "reference": "technique",
+      "prediction": "technique",
+      "ambigu": 0,
+      "brut": "{\"categorie\":\"technique\"}"
+    },
+    {
+      "id": "T014",
+      "texte": "Ma femme doit pouvoir consulter les documents aussi.",
+      "reference": "compte",
+      "prediction": "compte",
+      "ambigu": 0,
+      "brut": "{\"categorie\":\"compte\"}"
+    },
+    {
+      "id": "T015",
+      "texte": "Je voudrais que mon fils ait son propre acces sans voir mes documents.",
+      "reference": "compte",
+      "prediction": "compte",
+      "ambigu": 0,
+      "brut": "{\"categorie\":\"compte\"}"
+    },
+    {
+      "id": "T016",
+      "texte": "Ma facture de mars est de 89 euros alors que mon forfait est a 39 euros. Pouvez-vous m'expliquer la difference ?",
+      "reference": "facturation",
+      "prediction": "facturation",
+      "ambigu": 0,
+      "brut": "{\"categorie\":\"facturation\"}"
+    },
+    {
+      "id": "T017",
+      "texte": "Je pars 6 mois a l'etranger.",
+      "reference": "commercial",
+      "prediction": "compte",
+      "ambigu": 0,
+      "brut": "{\"categorie\":\"compte\"}"
+    },
+    {
+      "id": "T018",
+      "texte": "Le systeme me deconnecte automatiquement au bout de deux minutes d'inactivite, c'est ingerable.",
+      "reference": "technique",
+      "prediction": "technique",
+      "ambigu": 0,
+      "brut": "{\"categorie\":\"technique\"}"
+    },
+    {
+      "id": "T019",
+      "texte": "Je n'arrive pas a valider le formulaire, il me dit 'champ invalide' sans preciser lequel.",
+      "reference": "technique",
+      "prediction": "technique",
+      "ambigu": 0,
+      "brut": "{\"categorie\":\"technique\"}"
+    },
+    {
+      "id": "T020",
+      "texte": "Apres la derniere version, l'affichage est casse sur petit ecran, les boutons se chevauchent.",
+      "reference": "technique",
+      "prediction": "technique",
+      "ambigu": 0,
+      "brut": "{\"categorie\":\"technique\"}"
+    },
+    {
+      "id": "T021",
+      "texte": "Bonjour. Suite a la resiliation, il me reste un solde de 23,40 euros. Quand serai-je rembourse ?",
+      "reference": "facturation",
+      "prediction": "facturation",
+      "ambigu": 0,
+      "brut": "{\"categorie\":\"facturation\"}"
+    },
+    {
+      "id": "T022",
+      "texte": "Je compare vos offres avec celles d'un concurrent, pouvez-vous me faire une proposition ?",
+      "reference": "commercial",
+      "prediction": "commercial",
+      "ambigu": 0,
+      "brut": "{\"categorie\":\"commercial\"}"
+    },
+    {
+      "id": "T023",
+      "texte": "Le code de verification par SMS n'arrive pas sur mon nouveau numero.",
+      "reference": "compte",
+      "prediction": "technique",
+      "ambigu": 0,
+      "brut": "{\"categorie\":\"technique\"}"
+    },
+    {
+      "id": "T024",
+      "texte": "C'est combien que vous m'avez pris en mars exactement",
+      "reference": "facturation",
+      "prediction": "facturation",
+      "ambigu": 0,
+      "brut": "{\"categorie\":\"facturation\"}"
+    },
+    {
+      "id": "T025",
+      "texte": "La recherche ne renvoie aucun resultat meme pour des mots que je sais presents.",
+      "reference": "technique",
+      "prediction": "technique",
+      "ambigu": 0,
+      "brut": "{\"categorie\":\"technique\"}"
+    },
+    {
+      "id": "T026",
+      "texte": "J'ai ete preleve deux fois ce mois-ci pour le meme abonnement. Je demande le remboursement du doublon.",
+      "reference": "facturation",
+      "prediction": "facturation",
+      "ambigu": 0,
+      "brut": "{\"categorie\":\"facturation\"}"
+    },
+    {
+      "id": "T027",
+      "texte": "L'export CSV genere un fichier vide alors que j'ai bien des donnees affichees.",
+      "reference": "technique",
+      "prediction": "technique",
+      "ambigu": 0,
+      "brut": "{\"categorie\":\"technique\"}"
+    },
+    {
+      "id": "T028",
+      "texte": "Mon acces est bloque depuis que j'ai tape trois fois a cote.",
+      "reference": "compte",
+      "prediction": "compte",
+      "ambigu": 0,
+      "brut": "{\"categorie\":\"compte\"}"
+    },
+    {
+      "id": "T029",
+      "texte": "Bonjour, suite a mon demenagement j'ai rebranche le materiel comme indique dans la notice, tout est allume, les voyants sont verts, et pourtant rien ne se passe depuis quatre jours.",
+      "reference": "technique",
+      "prediction": "technique",
+      "ambigu": 0,
+      "brut": "{\"categorie\":\"technique\"}"
+    },
+    {
+      "id": "T030",
+      "texte": "je narrive plus a rentrer",
+      "reference": "compte",
+      "prediction": "compte",
+      "ambigu": 0,
+      "brut": "{\"categorie\":\"compte\"}"
+    },
+    {
+      "id": "T031",
+      "texte": "Je souhaite recevoir un justificatif de paiement pour ma comptabilite, pour la periode janvier a juin.",
+      "reference": "facturation",
+      "prediction": "facturation",
+      "ambigu": 0,
+      "brut": "{\"categorie\":\"facturation\"}"
+    },
+    {
+      "id": "T032",
+      "texte": "Depuis hier 14h plus rien",
+      "reference": "technique",
+      "prediction": "technique",
+      "ambigu": 0,
+      "brut": "{\"categorie\":\"technique\"}"
+    },
+    {
+      "id": "T033",
+      "texte": "Bonjour, j'ai change de numero de telephone le mois dernier suite a un changement d'operateur, et depuis je ne recois plus les codes que vous envoyez.",
+      "reference": "compte",
+      "prediction": "compte",
+      "ambigu": 0,
+      "brut": "{\"categorie\":\"compte\"}"
+    },
+    {
+      "id": "T034",
+      "texte": "Vous avez applique l'ancien tarif sur ma facture alors que j'ai change d'offre le mois dernier.",
+      "reference": "facturation",
+      "prediction": "facturation",
+      "ambigu": 0,
+      "brut": "{\"categorie\":\"facturation\"}"
+    },
+    {
+      "id": "T035",
+      "texte": "Comment on fait pour la double authentification",
+      "reference": "compte",
+      "prediction": "compte",
+      "ambigu": 0,
+      "brut": "{\"categorie\":\"compte\"}"
+    },
+    {
+      "id": "T036",
+      "texte": "Le site m'affiche une erreur quand je veux voir le detail du montant, mais ce qui m'interesse c'est de savoir pourquoi c'est 89 euros.",
+      "reference": "facturation",
+      "prediction": "facturation",
+      "ambigu": 0,
+      "brut": "{\"categorie\":\"facturation\"}"
+    },
+    {
+      "id": "T037",
+      "texte": "Quelqu'un d'autre utilise mes identifiants, j'ai vu des connexions etranges la nuit.",
+      "reference": "compte",
+      "prediction": "compte",
+      "ambigu": 0,
+      "brut": "{\"categorie\":\"compte\"}"
+    },
+    {
+      "id": "T038",
+      "texte": "J'ai paye ma facture il y a 5 jours mais elle apparait toujours comme impayee sur mon espace.",
+      "reference": "facturation",
+      "prediction": "facturation",
+      "ambigu": 0,
+      "brut": "{\"categorie\":\"facturation\"}"
+    },
+    {
+      "id": "T039",
+      "texte": "Impossible de finaliser le reglement, la page se recharge en boucle.",
+      "reference": "technique",
+      "prediction": "facturation",
+      "ambigu": 0,
+      "brut": "{\"categorie\":\"facturation\"}"
+    },
+    {
+      "id": "T040",
+      "texte": "mon voisin paye moins cher que moi pour la meme chose",
+      "reference": "commercial",
+      "prediction": "facturation",
+      "ambigu": 1,
+      "brut": "{\"categorie\":\"facturation\"}"
+    },
+    {
+      "id": "T041",
+      "texte": "mon espace client saffiche pas",
+      "reference": "technique",
+      "prediction": "technique",
+      "ambigu": 0,
+      "brut": "{\"categorie\":\"technique\"}"
+    },
+    {
+      "id": "T042",
+      "texte": "C'est quoi la difference exactement entre vos deux formules",
+      "reference": "commercial",
+      "prediction": "commercial",
+      "ambigu": 0,
+      "brut": "{\"categorie\":\"commercial\"}"
+    },
+    {
+      "id": "T043",
+      "texte": "Bonjour, nous sommes une association de douze benevoles et nous nous demandions si votre solution etait adaptee a une structure comme la notre, sachant que nous avons peu de moyens.",
+      "reference": "commercial",
+      "prediction": "commercial",
+      "ambigu": 0,
+      "brut": "{\"categorie\":\"commercial\"}"
+    },
+    {
+      "id": "T044",
+      "texte": "L'application plante quand je telecharge ma facture, mais de toute facon je conteste le montant.",
+      "reference": "facturation",
+      "prediction": "technique",
+      "ambigu": 1,
+      "brut": "{\"categorie\":\"technique\"}"
+    },
+    {
+      "id": "T045",
+      "texte": "J'ai deux comptes crees par erreur avec la meme adresse, peut-on les fusionner ?",
+      "reference": "compte",
+      "prediction": "compte",
+      "ambigu": 0,
+      "brut": "{\"categorie\":\"compte\"}"
+    },
+    {
+      "id": "T046",
+      "texte": "ca rame",
+      "reference": "technique",
+      "prediction": "technique",
+      "ambigu": 0,
+      "brut": "{\"categorie\":\"technique\"}"
+    },
+    {
+      "id": "T047",
+      "texte": "quand je clique sur valider il redemande le mot de passe en boucle",
+      "reference": "technique",
+      "prediction": "technique",
+      "ambigu": 0,
+      "brut": "{\"categorie\":\"technique\"}"
+    },
+    {
+      "id": "T048",
+      "texte": "Supprimez tout",
+      "reference": "compte",
+      "prediction": "compte",
+      "ambigu": 0,
+      "brut": "{\"categorie\":\"compte\"}"
+    },
+    {
+      "id": "T049",
+      "texte": "Vous m'avez envoye une relance. Mon compte indique pourtant que tout est regle.",
+      "reference": "facturation",
+      "prediction": "facturation",
+      "ambigu": 0,
+      "brut": "{\"categorie\":\"facturation\"}"
+    },
+    {
+      "id": "T050",
+      "texte": "Je n'ai jamais demande l'option premium et elle est sur ma note.",
+      "reference": "facturation",
+      "prediction": "facturation",
+      "ambigu": 0,
+      "brut": "{\"categorie\":\"facturation\"}"
+    },
+    {
+      "id": "T051",
+      "texte": "Vos serveurs sont down ?",
+      "reference": "technique",
+      "prediction": "technique",
+      "ambigu": 0,
+      "brut": "{\"categorie\":\"technique\"}"
+    },
+    {
+      "id": "T052",
+      "texte": "Mon compte est bloque apres plusieurs tentatives de connexion, pouvez-vous le debloquer ?",
+      "reference": "compte",
+      "prediction": "compte",
+      "ambigu": 0,
+      "brut": "{\"categorie\":\"compte\"}"
+    },
+    {
+      "id": "T053",
+      "texte": "40 euros ??",
+      "reference": "facturation",
+      "prediction": "facturation",
+      "ambigu": 0,
+      "brut": "{\"categorie\":\"facturation\"}"
+    },
+    {
+      "id": "T054",
+      "texte": "Suite a la panne de trois jours, quelle compensation est prevue sur ma prochaine echeance ?",
+      "reference": "facturation",
+      "prediction": "facturation",
+      "ambigu": 0,
+      "brut": "{\"categorie\":\"facturation\"}"
+    },
+    {
+      "id": "T055",
+      "texte": "Bonjour, je n'ai pas recu ma facture du mois de fevrier par mail, pouvez-vous me la renvoyer ?",
+      "reference": "facturation",
+      "prediction": "facturation",
+      "ambigu": 0,
+      "brut": "{\"categorie\":\"facturation\"}"
+    },
+    {
+      "id": "T056",
+      "texte": "combien de temps je suis engage",
+      "reference": "commercial",
+      "prediction": "commercial",
+      "ambigu": 0,
+      "brut": "{\"categorie\":\"commercial\"}"
+    },
+    {
+      "id": "T057",
+      "texte": "Bonjour, j'espere que vous allez bien. Je me permets de vous ecrire suite a un courrier recu la semaine derniere. Apres verification de mes releves des trois derniers mois, il apparait que la somme debitee ne correspond pas a ce qui figure sur mon contrat.",
+      "reference": "facturation",
+      "prediction": "facturation",
+      "ambigu": 0,
+      "brut": "{\"categorie\":\"facturation\"}"
+    },
+    {
+      "id": "T058",
+      "texte": "Mon abonnement est a 19,99 et on m'a pris 24,99, je veux comprendre avant de decider si je reste.",
+      "reference": "facturation",
+      "prediction": "facturation",
+      "ambigu": 1,
+      "brut": "{\"categorie\":\"facturation\"}"
+    },
+    {
+      "id": "T059",
+      "texte": "Je veux arreter a la fin de l'echeance en cours, sans frais.",
+      "reference": "commercial",
+      "prediction": "commercial",
+      "ambigu": 0,
+      "brut": "{\"categorie\":\"commercial\"}"
+    },
+    {
+      "id": "T060",
+      "texte": "Bonsoir, j'aimerais etaler le paiement de ma facture sur deux mois, est-ce possible ?",
+      "reference": "facturation",
+      "prediction": "facturation",
+      "ambigu": 0,
+      "brut": "{\"categorie\":\"facturation\"}"
+    },
+    {
+      "id": "T061",
+      "texte": "Le paiement en ligne echoue systematiquement au moment de valider, la page tourne dans le vide.",
+      "reference": "technique",
+      "prediction": "facturation",
+      "ambigu": 1,
+      "brut": "{\"categorie\":\"facturation\"}"
+    },
+    {
+      "id": "T062",
+      "texte": "J'ai suivi toutes vos procedures trois fois, redemarre, reinstalle, change de navigateur. Toujours pareil.",
+      "reference": "technique",
+      "prediction": "technique",
+      "ambigu": 0,
+      "brut": "{\"categorie\":\"technique\"}"
+    },
+    {
+      "id": "T063",
+      "texte": "Le lien de reinitialisation arrive bien mais la page qu'il ouvre est blanche.",
+      "reference": "technique",
+      "prediction": "technique",
+      "ambigu": 0,
+      "brut": "{\"categorie\":\"technique\"}"
+    },
+    {
+      "id": "T064",
+      "texte": "jai changé doffre le 3 et on ma quand meme pris lancien prix",
+      "reference": "facturation",
+      "prediction": "facturation",
+      "ambigu": 0,
+      "brut": "{\"categorie\":\"facturation\"}"
+    },
+    {
+      "id": "T065",
+      "texte": "Apres la panne de la semaine derniere, je pense partir chez un concurrent.",
+      "reference": "commercial",
+      "prediction": "commercial",
+      "ambigu": 0,
+      "brut": "{\"categorie\":\"commercial\"}"
+    },
+    {
+      "id": "T066",
+      "texte": "On m'a promis un geste commercial de 15 euros le mois dernier, je ne le vois nulle part.",
+      "reference": "facturation",
+      "prediction": "commercial",
+      "ambigu": 0,
+      "brut": "{\"categorie\":\"commercial\"}"
+    },
+    {
+      "id": "T067",
+      "texte": "La qualite est pire depuis que je suis passe a l'offre superieure.",
+      "reference": "technique",
+      "prediction": "technique",
+      "ambigu": 1,
+      "brut": "{\"categorie\":\"technique\"}"
+    },
+    {
+      "id": "T068",
+      "texte": "Comment modifier mon adresse postale dans mon espace client ?",
+      "reference": "compte",
+      "prediction": "compte",
+      "ambigu": 0,
+      "brut": "{\"categorie\":\"compte\"}"
+    },
+    {
+      "id": "T069",
+      "texte": "RGPD : je demande l'ensemble des informations me concernant.",
+      "reference": "compte",
+      "prediction": "compte",
+      "ambigu": 0,
+      "brut": "{\"categorie\":\"compte\"}"
+    },
+    {
+      "id": "T070",
+      "texte": "Vous m'avez facture des frais de retard alors que le prelevement a echoue de votre cote.",
+      "reference": "facturation",
+      "prediction": "facturation",
+      "ambigu": 0,
+      "brut": "{\"categorie\":\"facturation\"}"
+    },
+    {
+      "id": "T071",
+      "texte": "remboursement",
+      "reference": "facturation",
+      "prediction": "facturation",
+      "ambigu": 0,
+      "brut": "{\"categorie\":\"facturation\"}"
+    },
+    {
+      "id": "T072",
+      "texte": "Le fichier que je telecharge fait 0 octet.",
+      "reference": "technique",
+      "prediction": "technique",
+      "ambigu": 0,
+      "brut": "{\"categorie\":\"technique\"}"
+    }
+  ]
+}
